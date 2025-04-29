@@ -5,14 +5,16 @@ if(!require(devtools)) install.packages("devtools")
 devtools::install_github("RightSZ/xvm")
 
 install.packages("tidyverse")
+
+#loading the packages
 library(tidyverse)
 library(xvm)
 
-
 #rmsd_cefa_file_path <- system.file("extdata/rmsd.xvg", package = "xvm")
 #cefazolin
-rmsd_cefa <- read_xvg("C:/Users/meema/OneDrive/Desktop/6-month internship/PE/rmsd_cefa_100.xvg")
-plot_xvg(rmsd_cefa)
+rmsd_cefa <- read_xvg("C:/Users/meema/OneDrive/Desktop/6-month internship/PE/rmsd_cefa_100.xvg") #path to your xvg file
+plot_xvg(rmsd_cefa) #in-built plotting function in the xvm package 
+#ggplot does not work with this data directly
 
 rmsf_cefa <- read_xvg("C:/Users/meema/OneDrive/Desktop/6-month internship/PE/rmsf_cefa_100.xvg")
 plot_xvg(rmsf_cefa)
